@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Tebakan</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="title">Hasil Tebakan</h1>
+            <div class="alert alert-<%= status %>">
+                <%= message %>
+            </div>
+            <form action="/game" method="post">
+                <input type="number" id="guess" name="guess" min="1" max="10" placeholder="Coba lagi (1-10)" required>
+                <button type="submit" class="btn">Coba Lagi</button>
+            </form>
+            <a href="/" class="btn">Kembali ke Home</a>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>

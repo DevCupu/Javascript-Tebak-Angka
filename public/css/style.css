@@ -1,0 +1,233 @@
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #00b09b, #96c93d);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Kontainer utama */
+.container {
+    width: 720px; /* Ukuran kontainer lebih besar */
+    height: 580px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    animation: fadeIn 2s ease-out, float 4s ease-in-out infinite, bounce 2s ease infinite; /* Tambah animasi */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transform-origin: center;
+    cursor: pointer;
+}
+
+/* Fade in animasi */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animasi untuk melayang */
+@keyframes float {
+    0% {
+        transform: translateY(0); /* Mulai dari posisi semula */
+    }
+    50% {
+        transform: translateY(-20px); /* Bergerak ke atas */
+    }
+    100% {
+        transform: translateY(0); /* Kembali ke posisi semula */
+    }
+}
+
+/* Animasi pantulan */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-30px); /* Bergerak ke atas */
+    }
+    50% {
+        transform: translateY(0); /* Kembali ke posisi semula */
+    }
+    75% {
+        transform: translateY(-15px); /* Bergerak sedikit ke atas lagi */
+    }
+    100% {
+        transform: translateY(0); /* Kembali lagi ke posisi semula */
+    }
+}
+
+/* Efek saat hover */
+.container:hover {
+    transform: scale(1.1) rotate(5deg); /* Kontainer membesar dan sedikit berputar */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    background-color: #f4f8f4;
+}
+/* Content Styling */
+.content {
+    text-align: center;
+}
+
+/* Title Styling */
+.title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    animation: slideIn 0.8s ease-out;
+}
+
+/* Description Styling */
+.description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Input Styling */
+input[type="number"] {
+    padding: 12px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 80%;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+input[type="number"]:focus {
+    border-color: #FF6F61;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+}
+
+/* Button Styling */
+button {
+    padding: 14px 22px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+button:active {
+    transform: translateY(0);
+}
+
+/* Alert Messages Styling */
+.alert {
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+.alert.danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+.alert.warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* Link Styling */
+a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.btn {
+    display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff5252;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #fff;
+  color: #ff5252;
+  border: 2px solid #ff5252;
+  box-shadow: 5px 5px 0px #ff5252;
+}
+
+.btn:active {
+    background-color: #fcf414;
+  box-shadow: none;
+  transform: translateY(4px)
+}
+/* Back Button Styling */
+.back-btn {
+    margin-top: 20px;
+    color: #555;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+.back-btn:hover {
+    color: #007bff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
